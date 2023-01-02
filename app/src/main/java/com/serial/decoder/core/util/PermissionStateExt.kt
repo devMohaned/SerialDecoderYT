@@ -14,9 +14,9 @@ fun PermissionState.isDeniedPermanently(): Boolean {
 @Composable
 fun PermissionState.HandlePermissionCases(
     modifier: Modifier = Modifier,
-    ShouldShowRationaleContent: @Composable() (modifier: Modifier) -> Unit,
-    PermissionDeniedPermanentlyContent: @Composable() (modifier: Modifier) -> Unit,
-    HasPermissionContent: @Composable() (modifier: Modifier) -> Unit,
+    ShouldShowRationaleContent: @Composable() (modifier: Modifier) -> Unit, // Denied Once
+    PermissionDeniedPermanentlyContent: @Composable() (modifier: Modifier) -> Unit, // Denied Twice/Permenant
+    HasPermissionContent: @Composable() (modifier: Modifier) -> Unit, // Accepted
 ) {
     when {
         hasPermission -> {
